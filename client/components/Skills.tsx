@@ -48,7 +48,7 @@ export function Skills() {
         {/* Heading */}
         <h2
           ref={headingRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-light text-red-500 mb-16 md:mb-24"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-8 md:mb-12"
         >
           Skills & Tools
         </h2>

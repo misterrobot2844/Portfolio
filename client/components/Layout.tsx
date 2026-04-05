@@ -36,10 +36,10 @@ export function Layout({ children }: LayoutProps) {
 
       {/* Section Numbering - Right Side */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2 pointer-events-none">
-        <div className="text-4xl font-light text-gray-300 tracking-wider">
+        <div className="text-lg font-light text-muted-foreground tracking-wider">
           {sectionNumber}
         </div>
-        <div className="w-12 h-px bg-red-300/40"></div>
+        <div className="w-8 h-px bg-foreground/20"></div>
       </div>
 
       {children}

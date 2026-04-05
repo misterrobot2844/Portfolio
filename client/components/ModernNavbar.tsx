@@ -59,50 +59,45 @@ export function ModernNavbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-red-300/20">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        {/* Logo / Name Section */}
-        <div className="flex items-center gap-2 flex-shrink-0 group cursor-pointer">
-          <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-white">
-            <img 
+    <nav className="relative bg-transparent">
+      <div className="h-16 flex items-center justify-center">
+        {/* Logo / Name Section - Absolute Left */}
+        <div className="absolute left-6 md:left-12 flex items-center gap-2 flex-shrink-0 group cursor-pointer">
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+            <img
               src={LOGO_IMAGE}
               alt="MAD Logo"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="font-serif text-lg">
-            <span className="font-light text-gray-800">{cvData.name.split(" ")[0]}</span>
-            <span className="font-light text-red-500 ml-1">{cvData.name.split(" ")[1]}</span>
+          <div className="text-sm">
+            <span className="font-light text-foreground">{cvData.name.split(" ")[0]}</span>
+            <span className="font-light text-accent ml-1">{cvData.name.split(" ")[1]}</span>
           </div>
         </div>
 
-        {/* Navigation Icons */}
-        <div className="flex items-center gap-8">
+        {/* Centered Navigation Links */}
+        <div className="flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={cn(
-                "relative group flex items-center justify-center transition-all duration-300 p-2",
+                "relative flex items-center justify-center transition-all duration-300 p-1.5 text-sm",
                 activeSection === link.id
-                  ? "text-red-500"
-                  : "text-gray-400 hover:text-red-400"
+                  ? "text-accent font-medium"
+                  : "text-muted-foreground hover:text-foreground"
               )}
               title={link.label}
             >
-              <div className="flex items-center justify-center text-xl">
+              <div className="flex items-center justify-center">
                 {link.icon}
               </div>
 
-              {/* Tooltip on hover */}
-              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-light">
-                {link.label}
-              </span>
-
               {/* Active indicator */}
               {activeSection === link.id && (
-                <div className="absolute -bottom-3 left-0 right-0 h-0.5 bg-red-500 rounded-full" />
+                <div className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-accent rounded-full" />
               )}
             </a>
           ))}
