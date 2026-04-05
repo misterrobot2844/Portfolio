@@ -63,6 +63,7 @@ export function Experience() {
   return (
     <section
       ref={sectionRef}
+      id="experience"
       data-section="experience"
       className="relative w-full min-h-screen flex items-center justify-center px-8 md:px-12 lg:px-16 bg-background overflow-hidden py-20 md:py-32"
     >
@@ -70,7 +71,7 @@ export function Experience() {
         {/* Heading */}
         <h2
           ref={headingRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-light text-red-500 mb-16 md:mb-24"
+          className="text-2xl md:text-3xl lg:text-4xl font-light text-accent mb-8 md:mb-12"
         >
           Experience
         </h2>
@@ -88,16 +89,16 @@ export function Experience() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pb-12 md:pb-16 border-b border-foreground/10 last:border-b-0">
-                  <h3 className="text-2xl md:text-3xl font-light text-foreground mb-2">
+                <div className="flex-1 pb-8 md:pb-12 border-b border-foreground/10 last:border-b-0">
+                  <h3 className="text-base md:text-lg font-light text-foreground mb-1">
                     {exp.role}
                   </h3>
 
-                  <p className="text-lg md:text-xl font-light text-red-500 mb-4">
+                  <p className="text-sm md:text-base font-light text-accent mb-3">
                     {exp.company}
                   </p>
 
-                  <p className="text-lg md:text-xl font-light text-foreground/70 mb-6 leading-relaxed">
+                  <p className="text-sm md:text-base font-light text-foreground/70 mb-4 leading-relaxed">
                     {exp.description}
                   </p>
 
@@ -106,7 +107,7 @@ export function Experience() {
                     {exp.achievements.slice(0, 3).map((achievement, idx) => (
                       <li
                         key={idx}
-                        className="text-base md:text-lg font-light text-foreground/60 flex items-start gap-3"
+                        className="text-xs md:text-sm font-light text-foreground/60 flex items-start gap-3"
                       >
                         <span className="text-red-500 mt-1.5 flex-shrink-0">•</span>
                         <span>{achievement}</span>

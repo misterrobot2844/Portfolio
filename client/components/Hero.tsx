@@ -76,6 +76,7 @@ export function Hero() {
   return (
     <section
       ref={heroRef}
+      id="hero"
       data-section="hero"
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-200/40 via-red-100/30 to-red-50/50 pt-20"
     >
@@ -110,14 +111,14 @@ export function Hero() {
       >
         <h1
           ref={titleRef}
-          className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 leading-tight mb-6"
+          className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-tight mb-4"
         >
           Design with a Human Touch
         </h1>
 
         <p
           ref={subtitleRef}
-          className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto mb-12"
+          className="text-sm md:text-base text-muted-foreground font-light max-w-2xl mx-auto mb-8"
         >
           Creating visual stories through motion, design, and strategic creativity
         </p>

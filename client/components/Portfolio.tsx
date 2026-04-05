@@ -66,6 +66,7 @@ export function Portfolio() {
   return (
     <section
       ref={sectionRef}
+      id="portfolio"
       data-section="portfolio"
       className="relative w-full min-h-screen flex items-center justify-center px-8 md:px-12 lg:px-16 bg-background overflow-hidden py-20 md:py-32"
     >
@@ -73,7 +74,7 @@ export function Portfolio() {
         {/* Heading */}
         <h2
           ref={headingRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-light text-red-500 mb-16 md:mb-24"
+          className="text-2xl md:text-3xl lg:text-4xl font-light text-accent mb-8 md:mb-12"
         >
           My Work
         </h2>
@@ -88,17 +89,17 @@ export function Portfolio() {
             >
               <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                 {/* Number */}
-                <div className="text-6xl md:text-7xl font-light text-foreground/20 flex-shrink-0 -mt-2">
+                <div className="text-3xl md:text-4xl font-light text-foreground/20 flex-shrink-0 -mt-1">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-3xl md:text-4xl font-light text-foreground mb-3">
+                  <h3 className="text-lg md:text-xl font-light text-foreground mb-2">
                     {project.title}
                   </h3>
 
-                  <p className="text-lg md:text-xl text-foreground/60 font-light mb-6 leading-relaxed">
+                  <p className="text-sm md:text-base text-foreground/60 font-light mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -116,8 +117,8 @@ export function Portfolio() {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 md:mt-28 pt-16 md:pt-20 border-t border-foreground/10">
-          <p className="text-lg md:text-xl text-foreground/70 font-light mb-6">
+        <div className="mt-12 md:mt-16 pt-8 md:pt-12 border-t border-foreground/10">
+          <p className="text-sm md:text-base text-foreground/70 font-light mb-4">
             View more of my work on Behance and LinkedIn
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

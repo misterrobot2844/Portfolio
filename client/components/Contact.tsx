@@ -64,6 +64,7 @@ export function Contact() {
   return (
     <section
       ref={sectionRef}
+      id="contact"
       data-section="contact"
       className="relative w-full min-h-screen flex items-center justify-center px-8 md:px-12 lg:px-16 bg-foreground text-background overflow-hidden py-20 md:py-32"
     >
@@ -71,13 +72,13 @@ export function Contact() {
         {/* Heading */}
         <h2
           ref={headingRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-light text-red-400 mb-16 md:mb-20"
+          className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-8 md:mb-12"
         >
           Get In Touch
         </h2>
 
         {/* Contact Methods */}
-        <div ref={contentRef} className="space-y-8 md:space-y-12 mb-16 md:mb-24">
+        <div ref={contentRef} className="space-y-6 md:space-y-8 mb-8 md:mb-12">
           {/* Email */}
           <a
             href={`mailto:${cvData.email}`}
@@ -90,7 +91,7 @@ export function Contact() {
                 <p className="text-sm uppercase tracking-wider text-background/60 font-light mb-2">
                   Email
                 </p>
-                <p className="text-2xl md:text-3xl font-light text-background group-hover:text-primary transition-colors">
+                <p className="text-base md:text-lg font-light text-background group-hover:text-primary transition-colors">
                   {cvData.email}
                 </p>
               </div>
@@ -111,7 +112,7 @@ export function Contact() {
                 <p className="text-sm uppercase tracking-wider text-background/60 font-light mb-2">
                   Behance
                 </p>
-                <p className="text-2xl md:text-3xl font-light text-background group-hover:text-primary transition-colors">
+                <p className="text-base md:text-lg font-light text-background group-hover:text-primary transition-colors">
                   View My Portfolio
                 </p>
               </div>
@@ -132,7 +133,7 @@ export function Contact() {
                 <p className="text-sm uppercase tracking-wider text-background/60 font-light mb-2">
                   LinkedIn
                 </p>
-                <p className="text-2xl md:text-3xl font-light text-background group-hover:text-primary transition-colors">
+                <p className="text-base md:text-lg font-light text-background group-hover:text-primary transition-colors">
                   Connect With Me
                 </p>
               </div>
@@ -141,8 +142,8 @@ export function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-background/20 pt-12 md:pt-16">
-          <p className="text-sm font-light text-background/60">
+        <div className="border-t border-background/20 pt-6 md:pt-8">
+          <p className="text-xs font-light text-background/60">
             © {new Date().getFullYear()} Muhammad Ahmad. All rights reserved.
           </p>
         </div>
