@@ -59,10 +59,10 @@ export function ModernNavbar() {
   };
 
   return (
-    <nav className="relative bg-transparent border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
-        {/* Logo / Name Section */}
-        <div className="flex items-center gap-2 flex-shrink-0 group cursor-pointer">
+    <nav className="relative bg-transparent">
+      <div className="h-16 flex items-center justify-center">
+        {/* Logo / Name Section - Absolute Left */}
+        <div className="absolute left-6 md:left-12 flex items-center gap-2 flex-shrink-0 group cursor-pointer">
           <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-white">
             <img
               src={LOGO_IMAGE}
@@ -76,7 +76,7 @@ export function ModernNavbar() {
           </div>
         </div>
 
-        {/* Navigation Links */}
+        {/* Centered Navigation Links */}
         <div className="flex items-center gap-6">
           {navLinks.map((link) => (
             <a

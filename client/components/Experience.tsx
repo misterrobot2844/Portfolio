@@ -71,7 +71,7 @@ export function Experience() {
         {/* Heading */}
         <h2
           ref={headingRef}
-          className="text-2xl md:text-3xl lg:text-4xl font-light text-accent mb-8 md:mb-12"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent mb-8 md:mb-12"
         >
           Experience
         </h2>

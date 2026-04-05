@@ -106,14 +106,15 @@ export function Hero() {
       {/* Content Layer - Foreground */}
       <div
         ref={contentRef}
-        className="relative z-10 text-center px-6 md:px-8 max-w-3xl"
+        className="relative z-10 text-center px-6 md:px-8 max-w-4xl"
         style={{ willChange: "transform" }}
       >
         <h1
           ref={titleRef}
-          className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-tight mb-4"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4"
         >
-          Design with a Human Touch
+          Design with a{" "}
+          <span className="text-accent block">Human Touch</span>
         </h1>
 
         <p
